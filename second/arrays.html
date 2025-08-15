@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Objects</title>
+    <link rel="stylesheet" href="./second/index.html">
+    <style>
+        body {
+            background: radial-gradient(circle at center, #0f0f0f, #000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+        .Heading {
+            font-size: 3rem;
+            text-transform: uppercase;
+            background: linear-gradient(270deg, #ff00ff, #00ffff, #ffea00, #ff00ff);
+            background-size: 800% 800%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: galaxy 6s ease infinite, glitch 2s infinite;
+            text-shadow: 0 0 20px rgba(255, 0, 255, 0.6),
+                         0 0 40px rgba(0, 255, 255, 0.6),
+                         0 0 60px rgba(255, 255, 0, 0.6);
+        }
+
+        @keyframes galaxy {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0, 0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(-3px, 1px); }
+            80% { transform: translate(3px, -1px); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="Heading">Arrays And Objects</h1>
+</body>
+<script src="array.js"></script>
+</html>

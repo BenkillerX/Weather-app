@@ -1,0 +1,233 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #74ABE2, #5563DE);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.wetherForm {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.wetherForm input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+.wetherForm button {
+  background: #ffce54;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.wetherForm button:hover {
+  background: #f6b93b;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cityDisplay {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tempDisplay {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.humidityDisplay,
+.decDisplay,
+.wetherEmiji,
+.errorDisplay {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+.wetherEmiji {
+  font-size: 3rem;
+  margin-top: 10px;
+}
+
+.errorDisplay {
+  color: #ff4d4d;
+  font-weight: bold;
+  display: none; /* Hide by default */
+/* 1) Base styles (mobile-first) */
+/* 1) Reset & Globals */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  color: #333;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* 2) Container */
+.container {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* 3) Form (mobile first) */
+.wetherForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.cityInput,
+.wetherForm button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.cityInput {
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.wetherForm button {
+  background-color: #ff9800;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.wetherForm button:hover {
+  background-color: #e68900;
+}
+/* 4) Card: force vertical stacking */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* center everything horizontally */
+  gap: 0.5rem;              /* spacing between each line */
+  background: linear-gradient(145deg, #74ebd5 0%, #acb6e5 100%);
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* 5) Ensure these are full-width blocks */
+.cityDisplay,
+.tempDisplay {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+/* 6) Tweak spacing between the two */
+.cityDisplay {
+  margin-bottom: 0.5rem;
+}
+
+
+.wetherEmoji {
+  font-size: 5rem;
+  margin: 1rem 0;
+}
+
+.tempDisplay {
+  font-size: 4rem;
+  font-weight: 300;
+  margin: 0.5rem 0 1rem;
+  line-height: 1;
+}
+
+.humidityDisplay,
+.decDisplay {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+/* 6) Error Message */
+.errorDisplay {
+ /* toggle via JS or a modifier class */
+    margin: auto;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  color: red;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 7) Desktop Overrides */
+@media (min-width: 600px) {
+  .container {
+    max-width: 600px;
+    margin: auto;
+    padding: 0;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .wetherForm {
+    flex-direction: column;
+    gap: 4;
+    margin-bottom: 2rem;
+  }
+
+  .cityInput {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .wetherForm button {
+    width: auto;
+    border-radius: 0 4px 4px 0;
+  }
+}
